@@ -23,6 +23,7 @@
 /* Contenitori dell'header */
 .header_top{
     height: 70%;
+    background-image: url("img/car_wash_2.jpg");
 }
 .header_bottom{
     height: 30%;
@@ -46,9 +47,12 @@
 }
 .header_title{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 5%;
+    /* transform: translate(-50%, -50%); */
+}
+.col_white{
+    color: white;
 }
 
 
