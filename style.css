@@ -5,8 +5,61 @@
     padding: 0;
 }
 
+
+
+/* MISURE CONTENITORI PRINCIPALI */
+.header_container{
+    height: 25vh;
+}
+
+.body_container{
+    height: 65vh;
+}
+
+.footer_container{
+    height: 10vh;
+}
+
+/* Contenitori dell'header */
+.header_top{
+    height: 70%;
+}
+.header_bottom{
+    height: 30%;
+}
+.hamburger{
+    width: 5vh;
+    height: 5vh;
+    background-color: red;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+.header_box_size{
+    width: 33%;
+    height: 100%;
+}
+
+.header_box_title{
+    position: relative;
+}
+.header_title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/**/
 .d_flex{
     display: flex;
+}
+
+.txt_center{
+    text-align: center;
 }
 
 .bg_col_aqua{
@@ -15,4 +68,7 @@
 
 .bg_col_yel_gre{
     background-color: yellowgreen;
+}
+.bg_col_blu{
+    background-color: blue;
 }
