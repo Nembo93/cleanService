@@ -50,6 +50,16 @@
     /* transform: translate(-50%, -50%); */
 }
 
+
+/* Body */
+
+.body_col_sx{
+    width: 20%;
+}
+.body_col_dx{
+    width: 80%;
+}
+
 /* Navbar */
 /* .nav_box{
     width: 25%;
