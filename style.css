@@ -9,11 +9,11 @@
 
 /* MISURE CONTENITORI PRINCIPALI */
 .header_container{
-    height: 25vh;
+    height: 20vh;
 }
 
 .body_container{
-    height: 65vh;
+    height: 70vh;
 }
 
 .footer_container{
@@ -21,13 +21,11 @@
 }
 
 /* Contenitori dell'header */
-.header_top{
-    height: 70%;
-    background-image: url("img/car_wash_2.jpg");
+.header{
+    height: 100%;
+    background-image: url(img/car_wash_2.jpg);
 }
-.header_bottom{
-    height: 30%;
-}
+
 .hamburger{
     width: 5vh;
     height: 5vh;
@@ -51,6 +49,25 @@
     left: 5%;
     /* transform: translate(-50%, -50%); */
 }
+
+/* Navbar */
+/* .nav_box{
+    width: 25%;
+    border: 2px solid black;
+    position: relative;
+} */
+/* .nav_button{
+    width: 70%;
+    height: 80%;
+    border: 2px solid black;
+    border-radius: 15%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+
 .col_white{
     color: white;
 }
