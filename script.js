@@ -2,7 +2,8 @@
 
 // Dichiaro la variabile con la prima pagina dinamica da caricare nel body.
 var homePage        = "pages/wallet.html";
-var currentCoins    = 10;
+// var currentCoins    = 10;
+// var coinsToBuy      = 0;
 
 // Carico la prima pagina da visualizzare nel body
 function onLoadIndex()
@@ -12,15 +13,16 @@ function onLoadIndex()
 
 function onLoadWallet()
 {
-    var currentCoinsElement = document.getElementById("current_coins_id");
-    currentCoinsElement.innerHTML = currentCoins;
-
+    var currentCoins    = 10;
     var coinsToBuy      = 0;
     var pricePerCoin    = 0.50;
     var coinsToBuyValue = 0;
 
-    var currentCoinsElement         = document.getElementById("coins_to_buy_id");
-    currentCoinsElement.innerHTML   = coinsToBuy;
+    var currentCoinsElement         = document.getElementById("current_coins_id");
+    currentCoinsElement.innerHTML   = currentCoins;
+
+    var coinsToBuyElement           = document.getElementById("coins_to_buy_id");
+    coinsToBuyElement.innerHTML   = coinsToBuy;
 
     var coinsToBuyValueElement = document.getElementById("coins_to_buy_value_id");
     coinsToBuyValueElement.innerHTML = coinsToBuyValue.toFixed(2) + " €";
@@ -35,21 +37,16 @@ function onLoadWallet()
 
     function addCoins()
     {
-        console.log('Funzione +')
 
         coinsToBuy = coinsToBuy + 1;
         coinsToBuyValue = coinsToBuyValue + pricePerCoin;
 
-        console.log("gettoni da comprare", coinsToBuy);
-        console.log("valore dei gettoni", coinsToBuyValue);
-
-        currentCoinsElement.innerHTML       = coinsToBuy;
+        coinsToBuyElement.innerHTML         = coinsToBuy;
         coinsToBuyValueElement.innerHTML    = coinsToBuyValue.toFixed(2) + " €";
     }
 
     function subCoins()
     {
-        console.log('Funzione -')
 
         if(coinsToBuy > 0)
         {
@@ -61,31 +58,30 @@ function onLoadWallet()
             coinsToBuyValue = coinsToBuyValue - pricePerCoin;
         }   
 
-        console.log("gettoni da comprare", coinsToBuy);
-        console.log("valore dei gettoni", coinsToBuyValue);
-
-        currentCoinsElement.innerHTML       = coinsToBuy;
+        coinsToBuyElement.innerHTML         = coinsToBuy;
         coinsToBuyValueElement.innerHTML    = coinsToBuyValue.toFixed(2) + " €";
     }
 
 
     function buyCoins()
     {
+
+        console.log("acquista", currentCoins, coinsToBuy)
         // All'acquisto dei gettoni:
         // - aggiorno il valore dei gettoni
         currentCoins = currentCoins + coinsToBuy;
+
+        // stampo il risultato
+        console.log("acquistati:", coinsToBuy, "gettoni totali:", currentCoins)
+
+        currentCoinsElement.innerHTML       = currentCoins;
 
         // - resetto i valori dei gettoni da incrementare o diminuire per il prossimo acquisto
         coinsToBuy      = 0;
         coinsToBuyValue = 0;
 
-        // stampo il risultato
-        console.log("acquistati:", coinsToBuy, "gettoni totali:", currentCoins)
-
-        currentCoinsElement.innerHTML       = coinsToBuy;
+        coinsToBuyElement.innerHTML         = coinsToBuy;
         coinsToBuyValueElement.innerHTML    = coinsToBuyValue.toFixed(2) + " €";
-
-
     }
 }
 
