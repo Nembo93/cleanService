@@ -24,17 +24,17 @@
 
     <!-- Aside navbar -->
     <div class="bg_col_yel_gre body_col_sx d_flex">
-        <button class="aside_nav_button">
+        <button class="aside_nav_button" onclick="changePage('pages/home.html')">
             <div class="button_icon">
                 <i class="fa-solid fa-house fa-2xl"></i>
             </div>
             <div>
-                Le piste
+                Il lavaggio
             </div>
         </button>
 
         <button class="aside_nav_button">
-            <div class="button_icon">
+            <div class="button_icon" onclick="changePage('pages/sloves.html')">
                 <i class="fa-solid fa-car-tunnel fa-2xl"></i>
             </div>
             <div>
@@ -42,7 +42,7 @@
             </div>
         </button>
 
-        <button class="aside_nav_button">
+        <button class="aside_nav_button" onclick="changePage('pages/wallet.html')">
             <div class="button_icon">
                 <i class="fa-solid fa-coins fa-2xl"></i>
             </div>
@@ -53,12 +53,17 @@
     </div>
 
       <!-- Body destra -->
-    <div class="body_col_dx">dx</div>
+    <div id="pages_body" class="body_col_dx">
+
+
+
+    </div>
 </div>
 
 <div class="bg_col_aqua footer_container">
     <h3>footer</h3>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
