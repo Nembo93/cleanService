@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
-<body onload="onLoadWallet()">
+<body onload="onLoadWallet()" class="wallet_body">
 
-    <h1>Portafoglio</h1>
+    <h2 class="wallet_title">Portafoglio</h2>
 
-    <div>
-
-        <!-- Credito attuale -->
-        <div class="d_flex">
-            <div>Credito attuale:</div>
-            <div id="current_coins_id"></div>
-            <div>gettoni</div>
-        </div>
-
+    <!-- Credito attuale -->
+    <div class="d_flex current_credit_container">
+        <div class="mg_right">Credito attuale:</div>
+        <div id="current_coins_id" class="mg_right"></div>
+        <div class="mg_right">gettoni</div>
     </div>
 
     <script src="../script.js"></script>

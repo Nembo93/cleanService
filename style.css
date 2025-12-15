@@ -77,6 +77,22 @@
 }
 
 
+
+/* WAllet body */
+.wallet_title{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.wallet_body{
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+
+
+
+
 /* Navbar */
 
 
@@ -126,4 +142,7 @@
 }
 .bg_col_blu{
     background-color: blue;
+}
+.mg_right{
+    margin-right: 5px;
 }
