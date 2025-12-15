@@ -173,6 +173,52 @@
 
 /* Sloves body */
 
+.sloves_title{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.sloves_body{
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.sloves_main_container{
+    /* background-color: yellow; */
+    height: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.sloves_container{
+    display: flex;
+    align-items: baseline;
+    /* background-color: aqua; */
+}
+
+.slove_box_sx{
+    /* background-color: yellowgreen; */
+    padding: 10%;
+    font-size: large;
+}
+
+.slove_box_dx{
+    /* padding: 5%; */
+}
+
+.select_slove_button{
+    font-size: large;
+    padding: 20%;
+    background-color: transparent;
+    /* border: 5px solid yellowgreen; */
+    border-radius: 20%;
+    color: yellowgreen;
+    background-color: black;
+}
+
+
 
 
 
