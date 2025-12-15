@@ -4,6 +4,11 @@
 var homePage = "pages/wallet.html";
 var  currentCoins = 10;
 
+// Carico la prima pagina da visualizzare nel body
+function onLoadIndex()
+{
+    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +homePage+ '" width="100%" height="100%" </object>';
+}
 
 function onLoadWallet()
 {
@@ -11,11 +16,7 @@ function onLoadWallet()
     currentCoinsElement.innerHTML = currentCoins;
 }
 
-// Carico la prima pagina da visualizzare nel body
-function onLoadIndex()
-{
-    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +homePage+ '" width="100%" height="100%" </object>';
-}
+
 
 
 
@@ -24,7 +25,7 @@ function changePage(page)
 {
     console.log(page);
 
-    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +page+ '" width="60%" height="98%" </object>';
+    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +page+ '" width="100%" height="100%" </object>';
 }
 
 // LOGICA DI AQUISTO GETTONI

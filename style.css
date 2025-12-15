@@ -87,6 +87,41 @@
     width: 100%;
     padding-top: 5%;
     padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
+}
+.current_credit_container{
+    margin-bottom: 20%;
+}
+
+.buy_coins_contaniner{
+    width: 90%;
+    background-color: rebeccapurple;
+}
+
+.buy_coins_button_box{
+    justify-content: space-around;
+    align-items: baseline;
+    display: flex;
+}
+
+.buy_coins_button{
+    width: 10vh;
+    height: 10vh;
+    background-color: yellow;
+    border: 5px solid yellowgreen;
+    border-radius: 25%;
+    color: yellowgreen;
+}
+
+.coins_to_buy_box{
+    /* margin-left: 10%;
+    margin-right: 10%; */
+}
+
+.value_to_show_box{
+    
 }
 
 
@@ -124,6 +159,12 @@
 .d_flex{
     display: flex;
 }
+.just_center{
+    justify-content: center;
+}
+.just_space_between{
+    justify-content: space-between;
+}
 
 .flex_dir_col{
     flex-direction: column;
@@ -145,4 +186,8 @@
 }
 .mg_right{
     margin-right: 5px;
+}
+
+.font_big{
+    font-size: 20px;
 }
