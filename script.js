@@ -22,6 +22,9 @@ function onLoadWallet()
     var currentCoinsElement = document.getElementById("coins_to_buy_id");
     currentCoinsElement.innerHTML = coinsToBuy;
 
+    var coinsToBuyValueElement = document.getElementById("coins_to_buy_value_id");
+    coinsToBuyValueElement.innerHTML = coinsToBuyValue.toFixed(2) + " €";
+
     const addButton = document.getElementById("add_button_id");
     const subButton = document.getElementById("sub_button_id");
 
@@ -38,7 +41,8 @@ function onLoadWallet()
         console.log("gettoni da comprare", coinsToBuy);
         console.log("valore dei gettoni", coinsToBuyValue);
 
-        currentCoinsElement.innerHTML = coinsToBuy;
+        currentCoinsElement.innerHTML       = coinsToBuy;
+        coinsToBuyValueElement.innerHTML    = coinsToBuyValue.toFixed(2) + " €";
     }
 
     function subCoins()
@@ -58,7 +62,8 @@ function onLoadWallet()
         console.log("gettoni da comprare", coinsToBuy);
         console.log("valore dei gettoni", coinsToBuyValue);
 
-        currentCoinsElement.innerHTML = coinsToBuy;
+        currentCoinsElement.innerHTML       = coinsToBuy;
+        coinsToBuyValueElement.innerHTML    = coinsToBuyValue.toFixed(2) + " €";
     }
 }
 
