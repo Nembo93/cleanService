@@ -1,7 +1,7 @@
 // console.log("js funziona");
 
 // Dichiaro la variabile con la prima pagina dinamica da caricare nel body.
-var homePage        = "pages/wallet.html";
+var homePage        = "pages/sloves.html";
 // var currentCoins    = 10;
 // var coinsToBuy      = 0;
 
