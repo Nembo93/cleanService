@@ -1,25 +1,45 @@
-console.log("js funziona")
-var homePage = "pages/home.html";
+// console.log("js funziona");
 
-document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +homePage+ '" width="60%" height="98%" </object>';
+// Dichiaro la variabile con la prima pagina dinamica da caricare nel body.
+var homePage = "pages/wallet.html";
+var  currentCoins = 10;
 
-function changePage(page)
+
+function onLoadWallet()
 {
-    console.log(page)
-    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +page+ '" width="60%" height="98%" </object>';
+    var currentCoinsElement = document.getElementById("current_coins_id");
+    currentCoinsElement.innerHTML = currentCoins;
+}
+
+// Carico la prima pagina da visualizzare nel body
+function onLoadIndex()
+{
+    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +homePage+ '" width="60%" height="98%" </object>';
 }
 
 
 
-var  currentCoins = 10;
+// Funzione per la navigazione tra le pagine
+function changePage(page)
+{
+    console.log(page);
 
+    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +page+ '" width="60%" height="98%" </object>';
+}
+
+// LOGICA DI AQUISTO GETTONI
+// var  currentCoins = 10;
 // variabili per funzione addCoins
 // var coinsToBuy = 0;
 // var pricePerCoin = 0.50;
 // var coinsToBuyValue = 0;
 
-// var currentCoinsElement = document.getElementById("current_coins_id");
-//currentCoinsElement.innerHTML = currentCoins;
+
+
+
+
+
+
 
 // var currentCoinsElement = document.getElementById("coins_to_buy_id");
 // currentCoinsElement.innerHTML = coinsToBuy;
