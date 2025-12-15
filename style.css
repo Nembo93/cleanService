@@ -57,8 +57,7 @@
 .body_col_sx{
     width: 25%;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 2%;
+    padding: 3%;
 }
 .body_col_dx{
     width: 75%;
@@ -74,6 +73,7 @@
 .aside_nav_button{
     border: none;
     background-color: transparent;
+    margin-top: 25%;
 }
 
 
