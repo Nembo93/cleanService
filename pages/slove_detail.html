@@ -37,12 +37,13 @@
 
 
         <div>Fine lavaggio</div>
+    </div>
 
+    <div>
         <div id="timer_container_id_1" class="timer_box"></div>
         <div id="timer_container_id_2" class="timer_box"></div>
         <div id="timer_container_id_3" class="timer_box"></div>
         <div id="timer_container_id_4" class="timer_box"></div>
-
     </div>
 
 
@@ -62,7 +63,7 @@
 
         /////////////////////////////////////////////
 
-        var timer               = 5;
+        var timer               = 6;
         var operation_number    = 1;
         var timerId;
 
@@ -71,13 +72,14 @@
         var timerDisplay = document.getElementById('timer_container_id_'+display_timer_box_id);
 
 
+
         // startTimer INVOCA updateTimer
         function startTimer(param)
         {
             interval_id = setInterval(updateTimer, 1000);
         }
 
-        // updateTimer INVOCA 
+        // updateTimer INVOCA repeatOperation
         function updateTimer()
         {
             timer--;
@@ -90,7 +92,7 @@
                 console.log("timer scaduto");
 
                 // reimposta il timer e invoca una funzione
-                timer               = 5;
+                timer               = 6;
                 operation_number    = operation_number + 1;
 
                 repeatOperation(operation_number);
