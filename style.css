@@ -293,6 +293,7 @@ html, body{
     align-items: center;
     text-align: center;
     width: 60px;
+    justify-content: center;
 }
 
 .start_wash_button{
