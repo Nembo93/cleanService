@@ -21,6 +21,12 @@ html, body{
 
 .footer_container{
     height: 10vh;
+    background-color: black;
+    color: yellowgreen;
+    justify-content: space-between;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 8%;
 }
 
 /* Contenitori dell'header */
