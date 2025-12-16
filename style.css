@@ -263,23 +263,23 @@ html, body{
 } */
 
 .wash_operation_column{
-
     width: 180px;
-    padding: 5px;
-    background-color: red;
-
+    /* background-color: red; */
 }
+
 .wash_common_box{
     width: 100%;
+    margin-bottom: 10%;
+    border: 2px solid black;
 }
 
 .wash_box{
     border: 2px solid black;
     background-color: greenyellow;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     text-align: center;
     width: 120px;
 }
@@ -291,6 +291,7 @@ html, body{
     padding-left: 10px;
     padding-right: 10px;
     align-items: center;
+    text-align: center;
     width: 60px;
 }
 
