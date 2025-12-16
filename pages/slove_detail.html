@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="slove_title_id">Stocazzo</h1>
+
+    <script>
+        // var params  = new URLSearchParams(window.location.search);
+        
+        var url     = new URL(document.baseURI);
+        var params  = new URLSearchParams(url.search);
+
+        var title   = params.get("title");
+
+        console.log("vediamo", title);
+        console.log("vediamo 2", url);
+
+        document.getElementById("slove_title_id").innerHTML = title;
+    </script>
+
+</body>
+</html>

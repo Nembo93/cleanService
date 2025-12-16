@@ -89,5 +89,13 @@ function changePage(page)
 {
     console.log(page);
 
-    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +page+ '" width="100%" height="100%" </object>';
+    document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +page+ '" width="100%" height="100%"></object>';
+}
+
+function setSloveDetail(page, title)
+{
+    console.log(page);
+    console.log(title)
+
+    document.getElementById("slove_detail_id").innerHTML = '<object type="text/html" data="' +page+ '?title='+title+'" width="100%" height="100%"></object>';
 }
