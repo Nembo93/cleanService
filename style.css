@@ -105,8 +105,17 @@ html, body{
 } */
 
 
+/* Home body */
+.home_body{
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
 
-/* WAllet body */
+
+
+/* Wallet body */
 .wallet_title{
     margin-top: 5%;
     margin-bottom: 5%;
@@ -366,6 +375,12 @@ html, body{
 }
 .mg_right{
     margin-right: 5px;
+}
+.mg_bottom_10{
+    margin-bottom: 10%;
+}
+.mg_bottom_5{
+    margin-bottom: 5%;
 }
 
 .font_big{
