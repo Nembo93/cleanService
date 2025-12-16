@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>Document</title>
 </head>
 <body class="slove_detail_body">
@@ -14,52 +15,32 @@
     <!-- Washing session container -->
     <div class="wash_session_container">
 
-        <div>Avvia sessione</div>
-
         <div>
-            <div>icona</div>
-            <div>timer</div>
+            <button class="start_wash_button" onclick="startTimer()">
+                Avvia
+            </button>
         </div>
 
         <div>
-            <div>icona</div>
-            <div>timer</div>
+            <div class="d_flex">
+                <div>
+                    <i class="fa-solid fa-shower fa-2xl"></i>
+                </div>
+                <div>timer</div>
+            </div>
+
+            <div class="d_flex">
+                <div>icona</div>
+                <div>timer</div>
+            </div>
         </div>
 
-        <div>
-            <div>icona</div>
-            <div>timer</div>
-        </div>
-
-        <div>
-            <div>icona</div>
-            <div>timer</div>
-        </div>
 
         <div>Fine lavaggio</div>
 
+        <div id="timer_container_id" class="timer_box"></div>
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -72,6 +53,65 @@
         var title = "Pista 1";
 
         document.getElementById("slove_title_id").innerHTML = title;
+
+
+        // Logica timer
+
+        /////////////////////////////////////////////
+
+        var timer               = 5;
+        var operation_number    = 1;
+        var timerId;
+
+        const timerDisplay = document.getElementById('timer_container_id');
+
+
+        // startTimer INVOCA updateTimer
+        function startTimer(param)
+        {
+            interval_id = setInterval(updateTimer, 1000);
+        }
+
+        // updateTimer INVOCA 
+        function updateTimer()
+        {
+            timer--;
+
+            timerDisplay.textContent = timer;
+
+            if(timer == 0)
+            {
+                clearInterval(interval_id);
+                console.log("timer scaduto");
+
+                // reimposta il timer e invoca una funzione
+                timer               = 5;
+                operation_number    = operation_number + 1;
+
+                repeatOperation(operation_number);
+            }
+        }
+
+        function repeatOperation(operation_number)
+        {
+            console.log("passiamo all'operazione n", operation_number);
+
+            if( operation_number <= 4 )
+            {
+                startTimer();
+            
+            }else{
+
+                console.log("Lavaggio completato")
+            }
+        }
+
+
+
+
+
+        
+
     </script>
 
 </body>
