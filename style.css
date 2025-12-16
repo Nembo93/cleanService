@@ -256,6 +256,14 @@ html, body{
 }
 
 
+/* box icone operazioni */
+.wash_operation_box{
+    padding: 20%;
+    border: 2px solid black;
+    background-color: greenyellow;
+}
+
+
 
 
 
