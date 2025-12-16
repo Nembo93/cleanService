@@ -234,7 +234,7 @@ html, body{
 }
 
 .wash_session_container{
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -275,7 +275,7 @@ html, body{
 
 .wash_box{
     border: 2px solid black;
-    background-color: greenyellow;
+    background-color: yellowgreen;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 5%;
@@ -287,12 +287,21 @@ html, body{
 .wash_timer_box{
     font-size: 30px;
     border: 2px solid black;
-    background-color: greenyellow;
+    background-color: yellowgreen;
     padding-left: 10px;
     padding-right: 10px;
     align-items: center;
     text-align: center;
     width: 60px;
+}
+
+.start_wash_button{
+    margin-bottom: 30%;
+    font-size: large;
+    padding: 20%;
+    background-color: yellowgreen;
+    border: 5px solid black;
+    border-radius: 15%;
 }
 
 
