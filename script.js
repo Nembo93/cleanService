@@ -63,16 +63,11 @@ function onLoadWallet()
 
     function buyCoins()
     {
-
-        console.log("acquista", currentCoins, coinsToBuy)
         // All'acquisto dei gettoni:
         // - aggiorno il valore dei gettoni
         currentCoins = currentCoins + coinsToBuy;
 
-        // stampo il risultato
-        console.log("acquistati:", coinsToBuy, "gettoni totali:", currentCoins)
-
-        currentCoinsElement.innerHTML       = currentCoins;
+        currentCoinsElement.innerHTML = currentCoins;
 
         // - resetto i valori dei gettoni da incrementare o diminuire per il prossimo acquisto
         coinsToBuy      = 0;
@@ -87,15 +82,10 @@ function onLoadWallet()
 // Funzione per la navigazione tra le pagine
 function changePage(page)
 {
-    console.log(page);
-
     document.getElementById("pages_body").innerHTML = '<object type="text/html" data="' +page+ '" width="100%" height="100%"></object>';
 }
 
 function setSloveDetail(page, title)
 {
-    console.log(page);
-    console.log(title)
-
     document.getElementById("slove_detail_id").innerHTML = '<object type="text/html" data="' +page+ '?title='+title+'" width="100%" height="100%"></object>';
 }

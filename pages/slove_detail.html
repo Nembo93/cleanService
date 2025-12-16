@@ -6,18 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="slove_title_id">Stocazzo</h1>
+
+    <h2 id="slove_title_id"></h2>
+
+
+
+
+
+
 
     <script>
-        // var params  = new URLSearchParams(window.location.search);
         
         var url     = new URL(document.baseURI);
         var params  = new URLSearchParams(url.search);
-
         var title   = params.get("title");
-
-        console.log("vediamo", title);
-        console.log("vediamo 2", url);
 
         document.getElementById("slove_title_id").innerHTML = title;
     </script>
