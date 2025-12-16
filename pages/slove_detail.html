@@ -3,11 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="slove_detail_body">
 
-    <h2 id="slove_title_id"></h2>
+    <h2 id="slove_title_id" class="slove_detail_title"></h2>
+
+
+    <!-- Washing session container -->
+    <div class="wash_session_container">
+
+        <div>Avvia sessione</div>
+
+        <div>
+            <div>icona</div>
+            <div>timer</div>
+        </div>
+
+        <div>
+            <div>icona</div>
+            <div>timer</div>
+        </div>
+
+        <div>
+            <div>icona</div>
+            <div>timer</div>
+        </div>
+
+        <div>
+            <div>icona</div>
+            <div>timer</div>
+        </div>
+
+        <div>Fine lavaggio</div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17,9 +65,11 @@
 
     <script>
         
-        var url     = new URL(document.baseURI);
-        var params  = new URLSearchParams(url.search);
-        var title   = params.get("title");
+        // var url     = new URL(document.baseURI);
+        // var params  = new URLSearchParams(url.search);
+        // var title   = params.get("title");
+
+        var title = "Pista 1";
 
         document.getElementById("slove_title_id").innerHTML = title;
     </script>

@@ -1,7 +1,7 @@
 // console.log("js funziona");
 
 // Dichiaro la variabile con la prima pagina dinamica da caricare nel body.
-var homePage        = "pages/sloves.html";
+var homePage        = "pages/slove_detail.html";
 // var currentCoins    = 10;
 // var coinsToBuy      = 0;
 
@@ -87,5 +87,5 @@ function changePage(page)
 
 function setSloveDetail(page, title)
 {
-    document.getElementById("slove_detail_id").innerHTML = '<object type="text/html" data="' +page+ '?title='+title+'" width="100%" height="100%"></object>';
+    document.getElementById("slove_body_id").innerHTML = '<object type="text/html" data="' +page+ '?title='+title+'" width="100%" height="100%"></object>';
 }
