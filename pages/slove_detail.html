@@ -38,7 +38,10 @@
 
         <div>Fine lavaggio</div>
 
-        <div id="timer_container_id" class="timer_box"></div>
+        <div id="timer_container_id_1" class="timer_box"></div>
+        <div id="timer_container_id_2" class="timer_box"></div>
+        <div id="timer_container_id_3" class="timer_box"></div>
+        <div id="timer_container_id_4" class="timer_box"></div>
 
     </div>
 
@@ -63,7 +66,9 @@
         var operation_number    = 1;
         var timerId;
 
-        const timerDisplay = document.getElementById('timer_container_id');
+        var display_timer_box_id = 1;
+
+        var timerDisplay = document.getElementById('timer_container_id_'+display_timer_box_id);
 
 
         // startTimer INVOCA updateTimer
@@ -98,6 +103,10 @@
 
             if( operation_number <= 4 )
             {
+                display_timer_box_id = display_timer_box_id + 1;
+
+                timerDisplay = document.getElementById('timer_container_id_'+display_timer_box_id);
+
                 startTimer();
             
             }else{
