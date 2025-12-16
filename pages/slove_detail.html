@@ -16,7 +16,7 @@
     <div class="wash_session_container">
 
         <div>
-            <button class="start_wash_button" onclick="startTimer()">
+            <button class="start_wash_button" onclick="startTimer(true)">
                 <b>Avvia</b>
             </button>
         </div>
@@ -96,9 +96,6 @@
         </div>
     </div>
 
-    <!-- <i class="fa-solid fa-dharmachakra fa-2xl"></i>
-    <i class="fa-solid fa-brush fa-2xl"></i>
-    <i class="fa-solid fa-shower fa-2xl"></i> -->
 
     <script>
         
@@ -117,17 +114,31 @@
 
         var timer               = 6;
         var operation_number    = 1;
-        var timerId;
 
         var display_timer_box_id = 1;
 
-        var timerDisplay = document.getElementById('timer_container_id_'+display_timer_box_id);
+        var timerDisplay    = document.getElementById('timer_container_id_'+display_timer_box_id);
+        var operationEnded  = document.getElementById("end_wash_message_id");
 
 
 
         // startTimer INVOCA updateTimer
-        function startTimer(param)
+        function startTimer(clicked = false)
         {
+
+            if(clicked)
+            {
+                operationEnded.textContent = "Fine lavaggio";
+
+                for(let i = 1; i <= 4; i++)
+                {
+                    document.getElementById('timer_container_id_'+i).textContent = timer-1;
+                }
+            }
+
+
+            console.log("operation number allo start", operation_number);
+
             interval_id = setInterval(updateTimer, 1000);
         }
 
@@ -147,16 +158,17 @@
                 timer               = 6;
                 operation_number    = operation_number + 1;
 
-                repeatOperation(operation_number);
+                repeatOperation();
             }
         }
 
-        function repeatOperation(operation_number)
+        function repeatOperation()
         {
-            console.log("passiamo all'operazione n", operation_number);
 
             if( operation_number <= 4 )
             {
+                console.log("passiamo all'operazione n", operation_number);
+
                 display_timer_box_id = display_timer_box_id + 1;
 
                 timerDisplay = document.getElementById('timer_container_id_'+display_timer_box_id);
@@ -166,14 +178,30 @@
             }else{
 
                 console.log("Lavaggio completato")
+
+                operationEnded.textContent = "Lavaggio completato!";
+
+                ////////////////////////////////////
+
+                console.log("valori finali prima del reset");
+                console.log("display_timer_box_id", display_timer_box_id);
+                console.log("timerDisplay", 'timer_container_id_'+display_timer_box_id);
+                console.log("operation_number", operation_number);
+
+                operation_number        = 1;
+                display_timer_box_id    = 1;
+                timerDisplay            = document.getElementById('timer_container_id_'+display_timer_box_id);
+                timer                   = 6;
+
+                console.log("valori finali dopo il reset");
+                console.log("display_timer_box_id", display_timer_box_id);
+                console.log("timerDisplay", 'timer_container_id_'+display_timer_box_id);
+                console.log("operation_number", operation_number);
+
+                return;
             }
         }
 
-
-
-
-
-        
 
     </script>
 
